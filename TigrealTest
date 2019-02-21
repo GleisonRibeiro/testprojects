@@ -1,0 +1,26 @@
+function cashMachine(valor){
+    var cedula100 = 0,cedula50 = 0,cedula20 = 0,cedula10 = 0
+    while (valor > 100){
+        cedula100++
+        valor -= 100
+    }
+    while (valor > 50){
+        cedula50++
+        valor -= 50
+    }
+    while (valor > 20){
+        cedula20++
+        valor -= 20
+    }
+    while (valor > 10){
+        cedula10++
+        valor -= 10
+    }
+
+    console.log(`Valor troco em notas:
+    100: ${cedula100}
+    50:  ${cedula50}
+    20:  ${cedula20}
+    10:  ${cedula10}`)
+}
+cashMachine(100)
